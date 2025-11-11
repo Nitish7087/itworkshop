@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seasonal Recommendations</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+<body>
+  <section class="season-container">
+
+    <header>
+
+        <h1 style="text-align: center; margin-bottom: 20px;">Explore by Season</h1>
+        <a href="wp2.html">← Back to Home</a>
+    </header>
+
+
+    <div class="season-tabs">
+      <div class="season-tab active" onclick="changeTab('winter')">Winter (Nov-Feb)</div>
+      <div class="season-tab" onclick="changeTab('summer')">Summer (Mar-Jun)</div>
+      <div class="season-tab" onclick="changeTab('monsoon')">Monsoon (Jul-Oct)</div>
+    </div>
+    
+    <div id="winter" class="season-content active">
+      <p style="text-align: center; margin-bottom: 20px;">Experience pleasant temperatures, clear skies, and vibrant festivals during India's winter season.</p>
+      <div class="season-cards">
+        <div class="season-card">
+          <img src="goa.jpg" alt="Goa">
+          <div class="season-card-content">
+            <h3>Goa</h3>
+            <p>Perfect beach weather with temperatures between 20-30°C</p>
+            <span class="season-badge">Best Season</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="jaipur.webp" alt="Jaipur">
+          <div class="season-card-content">
+            <h3>Jaipur</h3>
+            <p>Ideal for sightseeing with cool, comfortable days</p>
+            <span class="season-badge">Best Season</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="agra.jpg" alt="Agra">
+          <div class="season-card-content">
+            <h3>Agra</h3>
+            <p>Perfect time to visit the Taj Mahal with fog-free mornings</p>
+            <span class="season-badge">Best Season</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="summer" class="season-content">
+      <p style="text-align: center; margin-bottom: 20px;">Escape the heat by heading to India's beautiful hill stations and mountain retreats.</p>
+      <div class="season-cards">
+        <div class="season-card">
+          <img src="kashmir.jpg" alt="Kashmir">
+          <div class="season-card-content">
+            <h3>Kashmir</h3>
+            <p>Lush green valleys and pleasant temperatures make this the prime time to visit</p>
+            <span class="season-badge">Best Season</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="manali.avif" alt="Manali">
+          <div class="season-card-content">
+            <h3>Manali</h3>
+            <p>Perfect for outdoor activities with all mountain passes open</p>
+            <span class="season-badge">Best Season</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="munnar.jpg" alt="Munnar">
+          <div class="season-card-content">
+            <h3>Munnar</h3>
+            <p>Tea plantations look spectacular in the clear summer light</p>
+            <span class="season-badge">Good Season</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="monsoon" class="season-content">
+      <p style="text-align: center; margin-bottom: 20px;">Experience lush landscapes and cultural activities during India's rejuvenating rainy season.</p>
+      <div class="season-cards">
+        <div class="season-card">
+          <img src="kerela.jpg" alt="Kerala">
+          <div class="season-card-content">
+            <h3>Kerala</h3>
+            <p>Vibrant and green with special Ayurvedic treatments available</p>
+            <span class="season-badge">Ideal for Ayurveda</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="wayanad.jpg" alt="Wayanad">
+          <div class="season-card-content">
+            <h3>Wayanad</h3>
+            <p>Lush greenery, misty hills, and stunning waterfalls</p>
+            <span class="season-badge">Good Season</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <img src="goa.jpg" alt="Goa">
+          <div class="season-card-content">
+            <h3>Goa (Off-season)</h3>
+            <p>Lower hotel rates and lush scenery, though swimming is limited</p>
+            <span class="season-badge">Budget Friendly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function changeTab(season) {
+      // Hide all content
+      document.querySelectorAll('.season-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      document.querySelectorAll('.season-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      document.getElementById(season).classList.add('active');
+      document.querySelector(`.season-tab[onclick="changeTab('${season}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
